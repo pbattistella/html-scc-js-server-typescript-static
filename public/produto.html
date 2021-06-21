@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        h2{
+            text-align: center;
+        }
+        label{
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Produtos</h2>
+    <label>Lista de produtos</label>
+    <select id="produto">
+        <option> selecione um produto da lista</option>
+        <option value="Uva">Uva</option>
+        <option value="Laranja">Laranja</option>
+        <option value="Pera">Pera</option>
+        <option value="Banana">Banana</option>
+        <option value="Maçã">Maçã</option>
+    </select>
+
+    <p id="paragrafo"></p>
+
+    <script>
+        let select = document.querySelector('#produto')
+        let paragrafo = document.querySelector('#paragrafo')
+
+        select.addEventListener('change', setProduto)
+        
+        function setProduto(){
+            let opcao = select.value
+            console.log(opcao)
+            if (opcao === 'Uva'){
+                paragrafo.innerHTML = 'A ' + opcao + ' é um produto que veio da cidade de São Joaquim'
+            } else if (select.value === 'Laranja'){
+                paragrafo.innerHTML = 'A ' + opcao + ' é um produto que veio da cidade de Videira'
+            } else if (select.value === 'Pera'){
+                paragrafo.innerHTML = 'A ' + opcao + ' é um produto que veio da cidade de Lages'
+            } else if (select.value === 'Banana'){
+                paragrafo.innerHTML = 'A ' + opcao + ' é um produto que veio da cidade de Joinville'
+            } else if (select.value === 'Maçã'){
+                paragrafo.innerHTML = 'A ' + opcao + ' é um produto que veio da cidade de São Joaquim'
+            } else {
+                paragrafo.innerHTML = ''
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
