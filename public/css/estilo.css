@@ -36,11 +36,16 @@ li a {
     color: #fff;
     font-weight: bold;
     border-bottom: 2px solid #fff;
+    opacity: 0.8;
+    transition: 0.3s;
 }
 
 nav li a:hover{
-    color: #363636;
-    border-bottom: 2px solid #363636;
+    opacity: 1;
+}
+
+.active{
+    opacity: 1;
 }
 
 .container{
@@ -86,6 +91,68 @@ nav li a:hover{
 
 .btn-avaliar:hover{
     background-color: #daf7f7; 
+}
+
+.row-title{
+    display: flex;
+    color: #076b6b;
+    justify-content: center;
+    border-radius: 0.9em;
+}
+
+.row-input{
+    display: flex;
+    margin-top: 16px;
+}
+
+.col-label{
+    padding: 8px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.col-input{
+    padding: 8px; 
+    width: 100%;
+}
+
+.col-input input, textarea{
+    width: 96%;
+    border-radius: 0.35em;
+    border: 2px solid #076b6b;
+    background-color: #f2f8f8;
+    padding: 8px;
+}
+
+.col-input button{
+    width: 48%;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 0.45em;
+    
+    
+}
+
+.btn-success{
+    background-color: #119432;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.btn-success:hover{
+    background-color: #075019;
+}
+
+.btn-danger{
+    background-color: #c2310c;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-danger:hover{
+    background-color: #7c1e06;
 }
 
 hr{

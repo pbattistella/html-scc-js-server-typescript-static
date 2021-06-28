@@ -1,4 +1,5 @@
 let pontos
+let contatos = []
 
 const calcularPontos = function(){
     pontos = 0
@@ -62,4 +63,35 @@ const calcularPontos = function(){
         pontos += parseInt(p35.value)
     }
     document.getElementById('resultado').innerHTML = '<h2>Resultado da pesquisa</h2><br>Pontos: ' + pontos + '<br><h6>Máximo: 15, Mínimo: 3</h6>'
+}
+
+const addContato = function(){
+    let nome = document.getElementById('nome').value
+    let email = document.getElementById('email').value
+    let mensagem = document.getElementById('mensagem').value
+
+    if (nome != "" && email != "" && mensagem != ""){ 
+        let newContato = [nome, email, mensagem]
+        contatos.push(newContato)
+        console.log(contatos)
+
+        document.getElementById('nome').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('mensagem').value = ''
+        
+        let listMensagem = ''
+        
+        contatos.forEach(contato => {
+            listMensagem += '***************************\n'
+            listMensagem += 'Contato: ' + contato[0] + '\nE-mail: ' + contato[1] + '\nMensagem: ' + contato[2] + '\n\n\n'
+        });
+
+        document.getElementById('listmensagem').value = listMensagem
+
+    } else {
+        alert('Preencha os campos corretamente!')
+    }
+
+    
+
 }
